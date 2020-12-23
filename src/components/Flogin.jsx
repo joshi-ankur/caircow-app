@@ -24,7 +24,7 @@
 //     <div class="container">
 //       <Card style={{ width: '600px' }}>
 //         <Card.Header>
-//           { !login && 
+//           { !login &&
 //             <FacebookLogin
 //               appId="992489677898965"
 //               autoLoad={true}
@@ -51,38 +51,40 @@
 // }
 
 // export default Flogin;
-import React from 'react';
+import React from "react";
+import Button from "react-bootstrap/Button";
 
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
 const responseFacebook = (response) => {
-    console.log(response);
-}
+  console.log(response);
+};
 class Flogin extends React.Component {
-
-
-    render() {
-        return (
-            //   <FacebookLogin
-            //     appId="1088597931155576"
-            //     autoLoad={true}
-            //     fields="name,email,picture"
-            //     scope="public_profile,user_friends,user_actions.books"
-            //     callback={this.responseFacebook}
-            //   />
-            <FacebookLogin
-                appId="992489677898965"
-                autoLoad={true}
-                callback={responseFacebook}
-                render={renderProps => (
-                    <button onClick={renderProps.onClick} >
-                    <i class="fab fa-facebook-f"></i>Sign In
-                    with Facebook
-                    </button>
-                )}
-            />
-        )
-    }
+  render() {
+    return (
+      //   <FacebookLogin
+      //     appId="1088597931155576"
+      //     autoLoad={true}
+      //     fields="name,email,picture"
+      //     scope="public_profile,user_friends,user_actions.books"
+      //     callback={this.responseFacebook}
+      //   />
+      <FacebookLogin
+        appId="992489677898965"
+        autoLoad={true}
+        callback={responseFacebook}
+        render={(renderProps) => (
+          <Button class="btn btn-primary d-flex flex-row" block size="lg" onClick={renderProps.onClick}>
+            <i class="fab fa-facebook-f" aria-hidden="true"></i> Sign In With Facebook
+          </Button>
+        //   <button onClick={renderProps.onClick} >
+        //   <i class="fab fa-facebook-f"></i>Sign In
+        //   with Facebook
+        //   </button>
+        )}
+      />
+    );
+  }
 }
 
 export default Flogin;

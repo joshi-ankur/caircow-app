@@ -7,4 +7,14 @@
       margin: 0 auto;
       max-width: 320px;
     }
+
+    .btn-primary {
+      background-Color: #e6e1e1;
+      color: #f06a3a;
+    }
+
+    .btn-secondary {
+      background-Color: #f06a3a;
+      color: #fff;
+    }
   }

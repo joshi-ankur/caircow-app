@@ -66,6 +66,7 @@ export default function Login() {
           />
         </Form.Group> */}
                 <Button
+                  className="btn btn-secondary"
                   block
                   size="lg"
                   type="submit"
@@ -73,20 +74,16 @@ export default function Login() {
                 >
                   Continue
                 </Button>
-                <Divider variant="middle" />
+                {/* <br></br> */}
+                {/* <Divider variant="middle" /> */}
                 {/* <div>Or</div> */}
-               <Button block size="lg" variant="primary">
-                  Sign In With Google
-                </Button>
-                <Button block size="lg" variant="primary">
-                  Sign In With Facebook
-                </Button>
-                <Button block size="lg" variant="primary">
-                  Sign In With Linkedin
-                </Button>
-                <h1>
-                  New To Kierkou ? <a href="#">Sign Up</a>
-                </h1>
+                <h3>----------- or -----------</h3>
+                <Loginhooks></Loginhooks>
+                <Flogin></Flogin>
+                <Linklogin></Linklogin>
+                <h3>
+                  New To Kierkou ? <a href="#" style={{ color: '#f06a3a' }}>Sign Up</a>
+                </h3>
               </Form>
             </div>
           </Paper>
