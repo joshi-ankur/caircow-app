@@ -6,6 +6,9 @@ import Button from "react-bootstrap/Button";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Loginhooks from './Loginhooks';
+import Flogin from './Flogin';
+import Linklogin from "./Linklogin";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,11 +75,11 @@ export default function Login() {
                 </Button>
                 <Divider variant="middle" />
                 {/* <div>Or</div> */}
-                <Button block size="lg" variant="primary">
+               <Button block size="lg" variant="primary">
                   Sign In With Google
                 </Button>
                 <Button block size="lg" variant="primary">
-                  Sign In With Apple
+                  Sign In With Facebook
                 </Button>
                 <Button block size="lg" variant="primary">
                   Sign In With Linkedin
